@@ -1,0 +1,7 @@
+language: java
+jdk: oraclejdk7
+
+install:
+  - "wget http://i.turt2live.com/9ucg.jar -O PRBuilder.jar"
+script:
+  - "java -jar PRBuilder.jar travis=$TRAVIS_PULL_REQUEST slug=$TRAVIS_REPO_SLUG branch=$TRAVIS_BRANCH"
